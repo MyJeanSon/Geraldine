@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 90%;
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border: 5px solid #d4af37;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.envelope {
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+  background: white;
+  border: 5px solid #d4af37;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-image: url('https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL2FydHdvcmtcL2ltYWdlRmlsZVwvNWViMjgxMzMzYzhiYy5qcGciLCJyZXNpemUsMTUwMHxmb3JtYXQsd2VicCJdfQ.k4eMF8RjAm_zt0_qgkcWi_R8GgZAwQbmKhX97_GJnVM.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  font-style: italic;
+  color: #d4af37;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  letter-spacing: 2px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.ornament {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url('');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.left {
+  top: 300px;
+  left: 50px;
+  transform: rotate(10deg);
+}
+
+.right {
+  top: 300px;
+  right: 50px;
+  transform: rotate(-10deg);
+}
+
+.open-button {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid #d4af37;
+  color: #d4af37;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.open-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.open-button:active {
+  transform: scale(0.98);
+}
+
+.info-card {
+  background: white;
+  border: 3px solid #d4af37;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.info-card h1 {
+  color: #d4af37;
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.info-card p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de confeti */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.info-image {
+  width: 100%;
+  height: auto; /* Mantiene proporción */
+  object-fit: cover; /* Recorta si es necesario */
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Estilo del contador regresivo */
+.countdown-title {
+  color: #d4af37;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  background: white;
+  border: 3px solid #d4af37;
+  border-radius: 15px;
+  padding: 20px;
+  width: 120px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.countdown-box:hover {
+  transform: scale(1.05);
+}
+
+.number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #d4af37;
+  font-family: 'Times New Roman', serif;
+  line-height: 1;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Estilo para la sección interactiva */
+.interactive-section {
+  padding: 40px 20px;
+}
+
+.section-title {
+  color: #d4af37;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-block {
+  background: white;
+  border: 3px solid #d4af37;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.interactive-block:hover {
+  transform: scale(1.02);
+}
+
+.interactive-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.location-text {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+}
+
+.btn-map,
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', serif;
+}
+
+.btn-map {
+  background-color: #d4af37;
+  color: white;
+  border: 2px solid #d4af37;
+}
+
+.btn-map:hover {
+  background-color: white;
+  color: #d4af37;
+  transform: scale(1.05);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  border: 2px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+  background-color: white;
+  color: #25D366;
+  transform: scale(1.05);
+}

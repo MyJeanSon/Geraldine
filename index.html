@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Quince Años - Geraldine</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Sección 1: Sobre -->
+  <section class="section envelope">
+    <div class="name">Geraldine</div>
+    <div class="ornament left"></div>
+    <div class="ornament right"></div>
+    <button class="open-button">Abrir</button>
+  </section>
+
+  <!-- Sección 2: Información principal (aparece tras el confeti) -->
+  <section class="section info-section hidden">
+    <img src="seccion1.jpg" alt="Datos de la fiesta" class="info-image" />
+  </section>
+
+  <!-- Sección 3: Contador Regresivo -->
+  <section class="section details-section hidden">
+  <h2 class="countdown-title">¡Falta poco para mi gran noche!</h2>
+  <div class="countdown-container">
+    <div class="countdown-box">
+      <span class="number" id="days">00</span>
+      <span class="label">Días</span>
+    </div>
+    <div class="countdown-box">
+      <span class="number" id="hours">00</span>
+      <span class="label">Horas</span>
+    </div>
+    <div class="countdown-box">
+      <span class="number" id="minutes">00</span>
+      <span class="label">Minutos</span>
+    </div>
+    <div class="countdown-box">
+      <span class="number" id="seconds">00</span>
+      <span class="label">Segundos</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Mis padres y mis padrinos -->
+  <section class="section parents-section hidden">
+    <img src="seccion2.jpg" alt="Mis padres y padrinos" class="info-image" />
+  </section>
+
+  <!-- Sección 5: Poema -->
+<section class="section poem-section hidden">
+  <img src="seccion3.jpg" alt="Poema para mis quince años" class="info-image" />
+</section>
+
+<!-- Sección 6: Detalles interactivos -->
+<section class="section interactive-section hidden">
+  <h2 class="section-title">Detalles de la Celebración</h2>
+
+  <!-- Bloque 1: Iglesia -->
+  <div class="interactive-block">
+    <img src="https://st3.depositphotos.com/2459687/15511/v/450/depositphotos_155110820-stock-illustration-church-icon-isolated-on-white.jpg" alt="Iglesia" class="interactive-icon" />
+    <p class="location-text">Santuario del señor de la cuevita, Avenida Ermita Iztapalapa 1281, Iztapalapa. 15:45 HRS.</p>
+    <a href="https://maps.app.goo.gl/reknjdhL3hwD1axr6" target="_blank" class="btn-map">Ver en Google Maps</a>
+  </div>
+
+  <!-- Bloque 2: Salón -->
+  <div class="interactive-block">
+    <img src="https://static.vecteezy.com/system/resources/previews/014/689/953/non_2x/social-event-catering-line-icon-vector.jpg" alt="Salón" class="interactive-icon" />
+    <p class="location-text">Salón de Eventos "Terraza".Av. Leyes de Reforma Lote 95a, Leyes de Reforma 3ra Secc, Iztapalapa, CDMX. 18:00 HRS.</p>
+    <a href="https://maps.app.goo.gl/GczTGpoCvwYzyte3A" target="_blank" class="btn-map">Ver en Google Maps</a>
+  </div>
+
+  <!-- Bloque 3: Confirmación -->
+  <div class="interactive-block">
+    <img src="https://previews.123rf.com/images/ambassador806/ambassador8061907/ambassador806190700004/132359364-please-respond-letter-rsvp-wedding-concept-envelope-love-letter-icon-handwritten-elegant.jpg" alt="Confirmar asistencia" class="interactive-icon" />
+    <p class="location-text">CONFIRMAR ASISTENCIA</p>
+    <a href="https://wa.me/525627001570?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Geraldine%20🎉" target="_blank" class="btn-whatsapp">Confirmar por WhatsApp</a>
+  </div>
+</section>
+
+<!-- Sección 7: Solicitud de Regalos -->
+  <section class="section gifts-section hidden">
+    <img src="seccion4.jpg" alt="Solicitud de regalos" class="info-image" />
+  </section>
+
+<!-- Audio de fondo -->
+<audio id="background-music" autoplay loop>
+  <source src="Sia - Snowman.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
