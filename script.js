@@ -38,20 +38,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
 
     setTimeout(() => {
-      parentsSection.classList.remove("hidden"); // Padres y padrinos
+      document.querySelector(".bless-section").classList.remove("hidden"); //Gracias a Dios
     }, 4000);
 
     setTimeout(() => {
-      document.querySelector(".poem-section").classList.remove("hidden");
+      parentsSection.classList.remove("hidden"); // Padres y padrinos
     }, 6000);
 
     setTimeout(() => {
-      document.querySelector(".interactive-section").classList.remove("hidden");
+      document.querySelector(".poem-section").classList.remove("hidden");
     }, 8000);
 
     setTimeout(() => {
-      document.querySelector(".gifts-section").classList.remove("hidden");
+      document.querySelector(".interactive-section").classList.remove("hidden");
     }, 10000);
+
+    setTimeout(() => {
+      document.querySelector(".gifts-section").classList.remove("hidden");
+    }, 12000);
+
+    setTimeout(() => {
+      document.querySelector(".money-section").classList.remove("hidden");
+    }, 14000);
 
   });
 });
@@ -84,4 +92,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicia el contador
   const countdownInterval = setInterval(updateCountdown, 1000);
   updateCountdown(); // Ejecuta inmediatamente
+
 });
